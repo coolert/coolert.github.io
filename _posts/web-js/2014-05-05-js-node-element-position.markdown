@@ -3,7 +3,7 @@ layout:     post
 title:      "javascript 节点与元素位置"
 subtitle:   "javascript node and element position"
 date:       2014-05-05 12:00:00
-author:     "LvI"
+author:     "Lv Hui"
 header-img: "img/post-bg-os-metro.jpg"
 header-mask: 0.3
 catalog: true

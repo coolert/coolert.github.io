@@ -3,7 +3,7 @@ layout:     post
 title:      "CSS3 基础与响应式"
 subtitle:   "CSS3 basic and responsive"
 date:       2014-05-15 12:00:00
-author:     "LvI"
+author:     "Lv Hui"
 header-img: "img/post-bg-os-metro.jpg"
 header-mask: 0.3
 catalog: true

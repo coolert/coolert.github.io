@@ -3,7 +3,7 @@ layout:     post
 title:      "javascript 事件对象与日期对象"
 subtitle:   "javascript event object and date object "
 date:       2014-05-06 12:00:00
-author:     "LvI"
+author:     "Lv Hui"
 header-img: "img/post-bg-os-metro.jpg"
 header-mask: 0.3
 catalog: true

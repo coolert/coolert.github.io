@@ -3,7 +3,7 @@ layout:     post
 title:      "PHP图像处理"
 subtitle:   "PHP image processing"
 date:       2014-06-13 12:00:00
-author:     "LvI"
+author:     "Lv Hui"
 header-img: "img/post-bg-re-vs-ng2.jpg"
 header-mask: 0.3
 catalog: true

@@ -3,7 +3,7 @@ layout:     post
 title:      "jQuery ajax"
 subtitle:   "jQuery ajax"
 date:       2014-05-10 12:00:00
-author:     "LvI"
+author:     "Lv Hui"
 header-img: "img/post-bg-os-metro.jpg"
 header-mask: 0.3
 catalog: true

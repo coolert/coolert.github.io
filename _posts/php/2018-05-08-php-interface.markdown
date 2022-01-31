@@ -3,7 +3,7 @@ layout:     post
 title:      "类常量与接口"
 subtitle:   "class constants and interface"
 date:       2018-05-08 12:00:00
-author:     "LvI"
+author:     "Lv Hui"
 header-img: "img/post-bg-os-metro.jpg"
 header-mask: 0.3
 catalog: true

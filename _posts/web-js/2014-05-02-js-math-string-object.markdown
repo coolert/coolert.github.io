@@ -3,7 +3,7 @@ layout:     post
 title:      "javascript 数学对象与字符串对象"
 subtitle:   "javascript math object and string object"
 date:       2014-05-02 12:00:00
-author:     "LvI"
+author:     "Lv Hui"
 header-img: "img/post-bg-os-metro.jpg"
 header-mask: 0.3
 catalog: true

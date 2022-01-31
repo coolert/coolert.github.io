@@ -3,7 +3,7 @@ layout:     post
 title:      "HTML5 画布"
 subtitle:   "HTML5 canvas"
 date:       2014-05-13 12:00:00
-author:     "LvI"
+author:     "Lv Hui"
 header-img: "img/post-bg-os-metro.jpg"
 header-mask: 0.3
 catalog: true

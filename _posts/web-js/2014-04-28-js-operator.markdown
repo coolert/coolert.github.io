@@ -3,7 +3,7 @@ layout:     post
 title:      "javascript运算符"
 subtitle:   "javascript operator"
 date:       2014-04-28 12:00:00
-author:     "LvI"
+author:     "Lv Hui"
 header-img: "img/post-bg-os-metro.jpg"
 header-mask: 0.3
 catalog: true

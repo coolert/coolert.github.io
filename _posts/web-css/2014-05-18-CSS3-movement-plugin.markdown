@@ -3,7 +3,7 @@ layout:     post
 title:      "CSS3 3D与运动插件"
 subtitle:   "CSS3 3D and movement plugin"
 date:       2014-05-18 12:00:00
-author:     "LvI"
+author:     "Lv Hui"
 header-img: "img/post-bg-os-metro.jpg"
 header-mask: 0.3
 catalog: true

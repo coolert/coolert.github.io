@@ -3,7 +3,7 @@ layout:     post
 title:      "匿名函数 "
 subtitle:   "closure function"
 date:       2018-05-29 12:00:00
-author:     "LvI"
+author:     "Lv Hui"
 header-img: "img/post-bg-os-metro.jpg"
 header-mask: 0.3
 catalog: true

@@ -3,7 +3,7 @@ layout:     post
 title:      "jQuery 选择器与筛选"
 subtitle:   "jQuery selector and filter"
 date:       2014-05-08 12:00:00
-author:     "LvI"
+author:     "Lv Hui"
 header-img: "img/post-bg-os-metro.jpg"
 header-mask: 0.3
 catalog: true

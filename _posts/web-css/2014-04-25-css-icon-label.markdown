@@ -3,7 +3,7 @@ layout:     post
 title:      "CSS 字体图标与label"
 subtitle:   "CSS icon and label"
 date:       2014-04-25 12:00:00
-author:     "LvI"
+author:     "Lv Hui"
 header-img: "img/post-bg-os-metro.jpg"
 header-mask: 0.3
 catalog: true

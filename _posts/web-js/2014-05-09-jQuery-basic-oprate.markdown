@@ -3,7 +3,7 @@ layout:     post
 title:      "jQuery 基本操作"
 subtitle:   "jQuery basic operate"
 date:       2014-05-09 12:00:00
-author:     "LvI"
+author:     "Lv Hui"
 header-img: "img/post-bg-os-metro.jpg"
 header-mask: 0.3
 catalog: true

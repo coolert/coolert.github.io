@@ -3,7 +3,7 @@ layout:     post
 title:      "项目放到服务器上时的注意事项 "
 subtitle:   "Some precsutions while putting projects on the server"
 date:       2018-06-10 12:00:00
-author:     "LvI"
+author:     "Lv Hui"
 header-img: "img/post-bg-os-metro.jpg"
 header-mask: 0.3
 catalog: true

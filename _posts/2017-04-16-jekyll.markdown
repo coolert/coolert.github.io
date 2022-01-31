@@ -3,7 +3,7 @@ layout:     post
 title:      "Linux下jekyll下载与安装"
 subtitle:   "Install jekyll under linux"
 date:       2017-04-16 22:10:00
-author:     "LvI"
+author:     "Lv Hui"
 header-img: "img/post-bg-os-metro.jpg"
 header-mask: 0.3
 catalog: true

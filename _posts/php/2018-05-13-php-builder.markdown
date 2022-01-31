@@ -3,7 +3,7 @@ layout:     post
 title:      "生成器 "
 subtitle:   "builder"
 date:       2018-05-13 12:00:00
-author:     "LvI"
+author:     "Lv Hui"
 header-img: "img/post-bg-os-metro.jpg"
 header-mask: 0.3
 catalog: true
