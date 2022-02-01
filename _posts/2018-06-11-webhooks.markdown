@@ -44,11 +44,11 @@ nginx本身不能处理PHP，静态页面nginx会自己处理，如果是php请�
 ps aux|grep nginx
 ```
 
-![](https://coolert.github.io/img/in-post/post-webhooks/nginx-user.png)
+![](/img/in-post/post-webhooks/nginx-user.png)
 
 可以看到父进程运行在root用户下，子进程运行在nginx用户下，这和在nginx.conf中配置的用户一致,配置文件位置`/etc/nginx/nginx.conf`
 
-![](https://coolert.github.io/img/in-post/post-webhooks/nginxconfig-user.png)
+![](/img/in-post/post-webhooks/nginxconfig-user.png)
 
 ### 查看php-fpm运行的用户
 
@@ -60,7 +60,7 @@ ps aux|grep php-fpm
 
 可以看到父进程运行在root用户下，子进程都在apache用户下
 
-![](https://coolert.github.io/img/in-post/post-webhooks/php-fpm-run-user.png)
+![](/img/in-post/post-webhooks/php-fpm-run-user.png)
 
 或者可以在php文件中写入以下代码，并进行访问
 
@@ -75,7 +75,7 @@ ps aux|grep php-fpm
 
 - 修改php-fpm中的配置文件`/etc/php-fpm.d/www.conf`改变运行的用户
 
-![](https://coolert.github.io/img/in-post/post-webhooks/php-fpm-user-change.png)
+![](/img/in-post/post-webhooks/php-fpm-user-change.png)
 
 ```
 # 编辑完毕后，重启php-fpm
@@ -84,7 +84,7 @@ systemctl restart php-fpm
 ps aux|grep php-fpm
 ```
 
-![](https://coolert.github.io/img/in-post/post-webhooks/changed-php-fpm.png)
+![](/img/in-post/post-webhooks/changed-php-fpm.png)
 
 可以看到已经全部变成nginx用户
 
@@ -101,7 +101,7 @@ chown nginx:nginx -R mini
 
 在项目的设置中添加新的webhooks,如下
 
-![](https://coolert.github.io/img/in-post/post-webhooks/github-webhooks.png)
+![](/img/in-post/post-webhooks/github-webhooks.png)
 
 ## webhooks访问的php文件
 

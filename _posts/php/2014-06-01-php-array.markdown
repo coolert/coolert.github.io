@@ -33,7 +33,7 @@ foreach($array as $k=>$v){
 
 ### 指针获得键值与键名
 
-![](https://coolert.github.io/img/in-post/key.png)
+![](/img/in-post/key.png)
 
 ```
 key($arr); //返回数组当前单元的键名
