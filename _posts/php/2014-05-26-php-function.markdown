@@ -126,7 +126,7 @@ function run(){
 	echo $x;
 }
 ```
-![](http://lvhui233.github.io/img/jingtaibianliang.png)
+![](https://coolert.github.io/img/in-post/jingtaibianliang.png)
 
 ### 递归函数
 
