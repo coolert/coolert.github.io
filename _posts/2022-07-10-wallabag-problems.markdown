@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "centos7下allabag非docker搭建遇到的问题与解决方法"
+title:      "centos7下wallabag非docker搭建遇到的问题与解决方法"
 subtitle:   "Problems and solutions encountered in non-docker construction of Wallabag under centos7"
 date:       2022-07-10 16:45:00
 author:     "Lv Hui"
