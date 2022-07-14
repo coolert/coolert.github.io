@@ -73,7 +73,7 @@ service php-fpm-74 restart
 
 再次执行时依然提示tidy扩展的问题
 
-原来是php-cli用的是另一个配置文件php-cli.ini，重新修改php-cli.ini
+执行`phpinfo()`显示已经成功启用扩展，但是执行`php -m`却无法显示，在网上查找发现原来是php-cli用的是另一个配置文件php-cli.ini，重新修改php-cli.ini
 
 ```bash
 echo "extension = tidy.so" >> /www/server/php/74/etc/php-cli.ini
