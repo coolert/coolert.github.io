@@ -38,4 +38,4 @@ session    required       pam_permit.so
 
 ### 参考
 
-- ****[Use TouchID to Authenticate sudo on macOS](https://it.digitaino.com/use-touchid-to-authenticate-sudo-on-macos/)****
+- [Use TouchID to Authenticate sudo on macOS](https://it.digitaino.com/use-touchid-to-authenticate-sudo-on-macos/)
