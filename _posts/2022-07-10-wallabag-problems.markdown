@@ -43,7 +43,7 @@ make: *** [install] Error 1
 
 ## 安装时composer.phar install 报错
 
-类型于下面这种
+类似于下面这种
 
 ```bash
 Problem 1
