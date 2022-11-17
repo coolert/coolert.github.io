@@ -47,3 +47,7 @@ Name 可以随意填写，Server选择之前配置过的服务，Start URL填具
 点击下方Validate按钮，检测配置是否正确，有错误的话会有提示，无错误时入下图。
 
 ![Result](/img/phpstorm/xdebug/Result.png)
+
+### Clash for Windows 代理问题
+
+如果开启了Clash for Windows 的 TUN 模式也会导致xdebug失效，在使用时请不要开始TUN Mode。
