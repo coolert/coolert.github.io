@@ -5,7 +5,7 @@ subtitle:   "Continuous deploy laravel project from github to server in china"
 date:       2023-06-17 11:34:00
 author:     "Lv Hui"
 header-img: "img/bg/blog-continuous-deployment.png"
-header-mask: 0.3
+header-mask: 0.5
 catalog: true
 tags:
 - PHP
