@@ -12,7 +12,7 @@ tags:
 - GitHub
 ---
 
-个人的网站代码库在github上，github action 可以很容易的实现自动化部署，但是由于国内网络的问题导致传输很慢，所以之前就放弃了。最近又重新有了这种想法，手动传代码实在是太麻烦了，不用版本控制的话很容易传错文件。结合网上看到的文章，采用先使用github action将代码push到Coding上的版本库，再使用Coding上的持续集成进行构建部署。鉴于网络原因，只能采用这种迂回战术了。
+代码库在github上，服务器用的腾讯云，鉴于网络原因，先使用github action将代码push到Coding上的版本库，再使用Coding上的持续集成进行构建部署。
 
 ## Github配置
 
@@ -73,8 +73,8 @@ jobs:
         env:
           # Coding上的代码库
           CODING_REPOSITORY: ****/****/****
-          CODING_USERNAME: ${{ secrets.CODING_USERNAME }}
-          CODING_PASSWORD: ${{ secrets.CODING_PASSWORD }}
+          CODING_USERNAME: ${\{secrets.CODING_USERNAME}}
+          CODING_PASSWORD: ${\{secrets.CODING_PASSWORD}}
 ```
 
 ## Coding配置
@@ -187,11 +187,11 @@ pipeline {
 ## 遇到的问题
 
 - 由于coding登录用的账号是邮箱账号有`@`符，导致Coding仓库地址无法正确识别，所以先将Coding的账号和密码先进行URL转码，再存入设置中。
-- 项目文件夹下的.user.ini防跨站文件无法修改权限，并且我们其实不需要修改它的权限，所以直接忽略掉这个错误
+- 项目文件夹下的`.user.ini`防跨站文件无法修改权限，并且我们其实不需要修改它的权限，所以直接忽略掉这个错误
 
 ## 参考
 
-- https://blog.forecho.com/automatic-deployment.html
+- <https://blog.forecho.com/automatic-deployment.html>
 - [GitHub Actions documentation](https://docs.github.com/en/actions)
 - [Jenkins 用户手册](https://www.jenkins.io/zh/doc/)
 - [Coding 持续集成](https://coding.net/help/docs/ci/intro.html)
