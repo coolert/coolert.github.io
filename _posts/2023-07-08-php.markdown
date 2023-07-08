@@ -1,0 +1,36 @@
+---
+layout:     post
+title:      "使用homebrew在macOS中切换php版本"
+subtitle:   "Switch php version in macOS using homebrew"
+date:       2023-07-08 15:43:00
+author:     "Lv Hui"
+header-img: "img/post-bg-os-metro.jpg"
+header-mask: 0.5
+catalog: true
+tags:
+- php
+- homestead
+- macOS 
+---
+
+macOS本身自带的php版本不符合需求时，需要我们自己安装对于的版本，这里以使用homestead安装为例。
+
+# 查看当前版本
+
+执行`php -v`查看当前php版本
+
+![查看php版本](/img/in-post/macos-php-version/check_version.png)
+
+# 安装需要的php版本并切换
+
+```zsh
+# 安装php
+brew install php@8.0
+# 配置zsh
+echo 'export PATH="/opt/homebrew/opt/php@8.0/bin:$PATH"' >> ~/.zsh.rc
+echo 'export PATH="/opt/homebrew/opt/php@8.0/sbin:$PATH"' >> ~/.zsh.rc
+source ~/.zsh.rc
+# 切换php版本
+brew unlink php@8.1
+brew link php@8.0
+```
