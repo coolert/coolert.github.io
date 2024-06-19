@@ -5,7 +5,7 @@ subtitle:   "Remember a laravel queue consumption problem"
 date:       2024-06-19 15:40:00
 author:     "Lv Hui"
 header-img: "img/bg/queue.png"
-header-mask: 0.3
+header-mask: 0.5
 catalog: true
 tags:
     - PHP
