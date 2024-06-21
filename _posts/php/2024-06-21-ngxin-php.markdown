@@ -1,0 +1,96 @@
+---
+layout:     post
+title:      "Nginx 配置新站点"
+subtitle:   "Configure a new website with nginx"
+date:       2024-06-21 17:36:00
+author:     "Lv Hui"
+header-img: "/lsky.coolerk.com/i/2024/06/21/6675493fbbecb.png"
+header-mask: 0.3
+catalog: true
+tags:
+    - PHP
+    - Nginx
+---
+
+## 新建站点目录
+
+```shell
+sudo mkdir -p /var/www/test.com
+```
+
+## 修改目录所有者与权限
+
+```shell
+sudo chown -R www-data:www-data /var/www/test.com
+sudo chmod -R /var/www/test.com
+```
+
+## 为新站点生成新配置
+
+### 创建配置文件
+
+```shell
+sudo vim /etc/nginx/sites-available/test.com
+```
+
+### 配置文件内容
+
+```
+server {
+    listen 80;
+    server_name test.com;
+
+    root /var/www/test.com;
+    index index.php index.html index.htm;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/var/run/php/php8.1-fpm.sock;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+
+    location ~ /\.ht {
+        deny all;
+    }
+
+    error_log /var/log/nginx/example.com.error.log;
+    access_log /var/log/nginx/example.com.access.log;
+}
+```
+
+`location ~ \.php$` 部分是用来对.php请求的处理
+
+`location ~ /\.ht` 部分禁止访问 .ht 文件
+
+
+### 在sites-enable中建立软链接
+
+```shell
+sudo ln -s /etc/nginx/sites-available/test.com /etc/nginx/sites-enable/
+```
+
+## 测试配置并重载Nginx配置
+
+### 测试
+
+```shell
+sudo nginx -t
+```
+
+没问题会有如下输出，有问题会有提示
+
+```
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+```
+
+### 重新加载配置
+
+```shell
+sudo systemctl reload nginx
+```
