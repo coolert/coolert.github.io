@@ -9,7 +9,7 @@ header-mask: 0.6
 catalog: true
 tags:
     - SSL
-    - nginx
+    - Nginx
 ---
 
 ## 安装 certbot 及 certbot nginx插件
