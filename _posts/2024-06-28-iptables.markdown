@@ -1,0 +1,69 @@
+---
+layout:     post
+title:      "iptables 的简单使用"
+subtitle:   "Simple use of iptables"
+date:       2024-06-28 15:08:00
+author:     "Lv Hui"
+header-img: "/lsky.coolerk.com/i/2024/06/28/667e61c24583d.jpg"
+header-mask: 0.6
+catalog: true
+tags:
+    - linux
+---
+
+iptables 是一个用户空间实用程序，用于配置 Linux 内核提供的 IP 数据包过滤规则。它是 Linux 系统中主要的防火墙工具，允许你管理和过滤网络流量。iptables 允许你定义规则来控制进出你的系统的数据包，提供了强大的安全防护和流量管理能力。
+
+## 查看规则
+
+```shell
+sudo iptables -L -v -n
+```
+- -L：列出规则。
+- -v：显示详细信息。
+- -n：以数字格式显示地址和端口。
+
+## 添加规则
+
+```shell
+# 允许本地回环地址访问 8080 端口
+sudo iptables -A INPUT -p tcp -s 127.0.0.1 --dport 8080 -j ACCEPT
+
+# 禁止其他所有来源访问 8080 端口
+sudo iptables -A INPUT -p tcp --dport 8080 -j DROP
+```
+
+## 删除规则
+
+```shell
+sudo iptables -D INPUT -p tcp -s 127.0.0.1 --dport 8080 -j ACCEPT
+```
+
+## 插入规则
+
+将规则插入到 INPUT 链的第 1 条
+
+```shell
+sudo iptables -I INPUT 1 -p tcp -s 127.0.0.1 --dport 8080 -j ACCEPT
+```
+
+##  清除所有规则
+
+```shell
+sudo iptables -F
+```
+
+## 使用 iptables-persistent 保存规则
+
+使用 iptables-persistent 来保存 iptables 规则，以便在系统重启时自动加载
+
+### 安装 iptables-persistent
+
+```shell
+sudo apt-get install iptables-persistent
+```
+
+### 保存当前规则
+
+```shell
+sudo netfilter-persistent save
+```
