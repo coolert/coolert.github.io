@@ -93,7 +93,7 @@ service php-fpm-74 restart
 
 ```bash
 #修改配置文件后清理缓存
-php bin/console cache:clear --env=prod
+bin/console cache:clear --env=prod
 ```
 
 ## 访问时报错权限问题
