@@ -39,7 +39,7 @@ directory=/path/to/your/project
 配置选项说明
 
 - program:worker: 定义了进程的名称。
-- process_name=%(program_name)s_%(process_num)02d: 用于命名每个队列进程，%(process_num)02d 会给进程编号，如 worker_00，-worker_01。
+- process_name=%(program_name)s_%(process_num)02d: 用于命名每个队列进程，%(process_num)02d 会给进程编号，如 worker_00，worker_01。
 - command: 指定要执行的命令。
 - autostart=true: 表示 Supervisor 启动时自动启动该进程。
 - autorestart=true: 如果进程意外退出，Supervisor 将自动重启它。
@@ -54,7 +54,7 @@ directory=/path/to/your/project
 
 ```shell
 sudo supervisorctl reread
-suod supervisorctl update
+sudo supervisorctl update
 ```
 
 ### 管理进程
