@@ -4,7 +4,7 @@ title:      "关于求知欲的一些想法"
 subtitle:   "Some thoughts on curiosity"
 date:       2025-04-02 23:05:00
 author:     "Lv Hui"
-header-img: "/lsky.coolerk.com/i/2024/09/27/66f64f81d88cd.jpg"
+header-img: "img/post-bg-os-metro.jpg"
 header-mask: 0.6
 catalog: true
 tags:
