@@ -1,0 +1,39 @@
+---
+layout:     post
+title:      "jwt在Pest测试中无法正常失效的问题解决"
+subtitle:   "The issue where jwt failed to fail normally in the Pest test resolved"
+date:       2025-10-19 20:16:00
+author:     "Lv Hui"
+header-img: "img/post-bg-os-metro.jpg"
+header-mask: 0.6
+catalog: true
+tags:
+    - PHP
+---
+
+## 前情提要
+
+我使用的是 `Laravel 12` 框架，并且使用独立的`.env.testing`作为测试用的配置文件，使用的包是`php-open-source-saver/jwt-auth`。登出时使用`auth('api')->loout()`来使请求时的token失效，但本应该失效的token却还能够正常使用，并没有正常失效。以下是断言部分。
+
+```php
+$headers = ['Authorization' => "Bearer {$token}"];
+withHeaders($headers)->json('POST', '/api/auth/logout')
+    ->assertNoContent();
+withHeaders($headers)->json('POST', '/api/auth/refresh')
+    ->assertUnauthorized();
+```
+
+## 解决问题
+
+`php-open-source-saver/jwt-auth`的黑名单依赖`taggable cache` 但是我的`.env.testing`中的缓存配置是`array`， 于是我修改了测试的缓存配置为`redis`，并且增加了`redis`连接配置。
+如果在`phpunit.xml`同样配置了`CACHE_STORE`参数的话，记得删掉或者同样配置为`redis`，在测试中该配置的优先级更高。
+
+但是在修改了缓存配置后，失效token还是没有被存入到黑名单中。于是我尝试直接发送http请求来验证`logout`方法是否成功使token失效，发现是没有问题的。
+那问题就出在测试的部分，`logout()`方法基于当前请求解析到的token，但是我们测试中与实际的http请求还是有区别的，可能并没有能成功的使我们的token失效。
+于是我修改了登出部分的代码，改为显示用请求头的token作废，这时断言就能够正常运行了。
+
+```php
+if ($token = request()->bearerToken()) {
+    auth('api')->setToken($token)->invalidate(true);
+}
+```
